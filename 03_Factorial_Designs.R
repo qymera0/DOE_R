@@ -1,7 +1,7 @@
 
 library(daewr)
 
-# 3 CREATING A 2 FACTOR FACTORIAL -----------------------------------------
+# 3.4 CREATING A 2 FACTOR FACTORIAL -----------------------------------------
 
 D <- expand.grid(BW = c(3.25, 3.75, 4.25), WL = c(4, 5, 6) )
 
