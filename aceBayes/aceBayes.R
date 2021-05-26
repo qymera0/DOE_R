@@ -218,3 +218,29 @@ ex411 <-
 
 assess(d1 = ex411, d2 = ex411$final.d[[1]])
 
+# Normal based approximation to the NSEL utility function
+
+prior <- function(B){
+        
+        theta <- matrix(0, nrow = B, ncol = p)
+        
+        for(b in 1:B){
+                
+                theta[b, ] <- runif(n = p, min = a1, max = a2)
+                
+        }
+        
+        theta
+        
+}
+
+ex412 <-
+        paceglm(
+                formula = ~ x1 + x2 + x3 + x4,
+                family = binomial,
+                start.d = startD,
+                prior = prior,
+                criterion = 'NSEL-Norm'
+        )
+
+assess(d1 = ex412, d2 = ex411)
