@@ -43,10 +43,31 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.3-3",
+      "Version": "1.3-4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "df57c82e79600601287edfdcef92c2d6"
+      "Hash": "4ed05e9c9726267e4a5872e09c04587c"
+    },
+    "Rcpp": {
+      "Package": "Rcpp",
+      "Version": "1.0.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "dbb5e436998a7eba5a9d682060533338"
+    },
+    "RcppArmadillo": {
+      "Package": "RcppArmadillo",
+      "Version": "0.10.5.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b1c9574190c1c84417eedaa5901138bf"
+    },
+    "acebayes": {
+      "Package": "acebayes",
+      "Version": "1.10",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d3e9dae212194bf6a7903c8e2c4e617d"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -61,6 +82,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "f0acb9dcb71a9cd9d5ae233c5035b1c5"
+    },
+    "compare": {
+      "Package": "compare",
+      "Version": "0.2-6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "aa1af0150d382f15818bee308a73436f"
     },
     "conf.design": {
       "Package": "conf.design",
@@ -99,10 +127,10 @@
     },
     "gtools": {
       "Package": "gtools",
-      "Version": "3.8.2",
+      "Version": "3.9.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "0a749b4458d19a54acae93c64e3e7c85"
+      "Hash": "2ace6c4a06297d0b364e0444384a2b82"
     },
     "igraph": {
       "Package": "igraph",
@@ -117,6 +145,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "f36bf1a849d9106dc2af72e501f9de41"
+    },
+    "lhs": {
+      "Package": "lhs",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e44ecdb78d9373a6a11515bf6ec00251"
     },
     "lmtest": {
       "Package": "lmtest",
@@ -167,12 +202,26 @@
       "Repository": "CRAN",
       "Hash": "c396592ecfe9e75cee1013533efafe34"
     },
+    "randtoolbox": {
+      "Package": "randtoolbox",
+      "Version": "1.30.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "826ed4853e2a94f21fe73076b573e43c"
+    },
     "renv": {
       "Package": "renv",
       "Version": "0.13.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "079cb1f03ff972b30401ed05623cbe92"
+    },
+    "rngWELL": {
+      "Package": "rngWELL",
+      "Version": "0.10-6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5bfc2b22e6f82943f552a9935b99f393"
     },
     "scatterplot3d": {
       "Package": "scatterplot3d",
@@ -194,13 +243,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "e4a046d5349f21e440bfd587e000a058"
-    },
-    "stringi": {
-      "Package": "stringi",
-      "Version": "1.6.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "9df5e6f9a7fa11b84adf0429961de66a"
     },
     "vcd": {
       "Package": "vcd",
