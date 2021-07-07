@@ -5,6 +5,8 @@ library(FrF2)
 library(DoE.base)
 library(daewr)
 library(AlgDesign)
+library(BsMD)
+library(leaps)
 
 
 # 6.2 HALF FRACTION 2K DESIGNS --------------------------------------------
@@ -198,3 +200,116 @@ newRuns
 # 6.6 PLACKET-BURMAN ------------------------------------------------------
 
 pb(nruns = 12, randomize = F)
+
+data("PB12Des")
+
+colnames(PB12Des) <- c("c11", "c10", "c9", "c8", "G", "F", "E", "D", "C", "B", "A")
+
+castf <- PB12Des[c(11,10,9,8,7,6,5,4,3,2,1)]
+
+y <- c(4.733, 4.625, 5.899, 7.0, 5.752, 5.682, 6.607, 5.818, 5.917, 5.863, 6.058, 4.809)
+
+castf <- cbind(castf, y)
+
+modpb <- lm(y ~ (.), data = castf)
+
+cfs <- coef(modpb)[2:12]
+
+names <- names(cfs)
+
+halfnorm(cfs, names, alpha = .35, refline = F)
+
+castfr <- castf[ ,c(1:7, 12)]
+
+modpbr <-
+        regsubsets(
+                y ~ (.)^2,
+                data = castfr,
+                method = 'exhaustive',
+                nvmax = 4,
+                nbest = 4
+        )
+rs <- summary(modpbr)
+
+plot(c(rep(1:4, each = 4)), rs$adjr2, xlab = "No. of Parameters", ylab = "Adjusted R-square")
+
+plot(modpb, scale = "r2")
+
+
+# 6.7 MIXED LEVEL FACTORIALS AND ORTHOGONAL ARRAYS ------------------------
+
+# Generate initial design
+
+cand <-
+        oa.design(
+                nlevels = c(3, 3, 3, 3, 3, 2, 2),
+                nruns = 36,
+                columns = 'min3',
+                seed = 104
+        )
+
+# Find the optimal design from initial one
+
+optim <-
+        optFederov(
+                ~ A + B + C + D + E + F + G,
+                cand,
+                nRepeats = 10,
+                nTrials = 18,
+                criterion = 'D'
+        )
+
+optim2 <-
+        optFederov(
+                ~ A + B + C + D + E + F + G + E:F + F:G,
+                cand,
+                nRepeats = 10,
+                nTrials = 18,
+                criterion = 'D'
+        )
+
+# Conjoint example
+
+show.oas(
+        factors = list(
+                nlevels = c(4, 3, 2),
+                number = c(2, 1, 1)
+        )
+)
+
+cand <-
+        oa.design(
+                nlevels = c(4, 4, 3, 2),
+                randomize = F,
+                seed = 2013
+        )
+
+optim <-
+        optFederov(
+                ~ A + B + C + D,
+                cand,
+                nRepeats = 10,
+                nTrials = 12,
+                criterion = 'D',
+                aug = F
+        )
+
+data("hardwood")
+
+modh <- 
+        lm(
+                Rating ~ Price + Density + Guarantee + Design,
+                data = hardwood
+        )
+
+anova(modh)
+
+
+# 6.8 DEFINITIVE SCREENING DESIGNS ----------------------------------------
+
+des <- 
+        DefScreen(
+                m = 8,
+                c = 2,
+                randomize = F
+        )
