@@ -160,6 +160,13 @@
       "Repository": "CRAN",
       "Hash": "2042cd9759cc89a453c4aefef0ce9aae"
     },
+    "Vdgraph": {
+      "Package": "Vdgraph",
+      "Version": "2.2-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "fe16c188aff127b89c9a41550384f53d"
+    },
     "abind": {
       "Package": "abind",
       "Version": "1.4-5",
@@ -397,6 +404,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "1f37fa4ab2f5f7eded42f78b9a887182"
+    },
+    "desirability": {
+      "Package": "desirability",
+      "Version": "2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2a662ba63dfe7bbe77c5089309ed8f24"
     },
     "digest": {
       "Package": "digest",
@@ -1085,6 +1099,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "249d8cd1e74a8f6a26194a91b47f21d1"
+    },
+    "rsm": {
+      "Package": "rsm",
+      "Version": "2.10.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7bf4036d06eb4026fa46aa4596cb7795"
     },
     "rstudioapi": {
       "Package": "rstudioapi",
