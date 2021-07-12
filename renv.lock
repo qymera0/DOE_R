@@ -449,10 +449,10 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.6.1",
+      "Version": "1.6.2-1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "fe420ee63b7bae8b4a43151ae686f657"
+      "Hash": "3bc0c21bd64b3a279d3a3ae138330b32"
     },
     "estimability": {
       "Package": "estimability",
